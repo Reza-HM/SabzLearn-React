@@ -1,0 +1,13 @@
+/* Start landing Styles */
+
+.landing {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./background_landing.jfif") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  padding: 9rem 0;
+  color: white;
+}
+
+/* Finish landing Styles */

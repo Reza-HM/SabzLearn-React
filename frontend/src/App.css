@@ -1,0 +1,169 @@
+/* Start Default Styles */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  direction: rtl;
+}
+
+*,
+*::after,
+*::before {
+  outline: none;
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: #464749;
+  transition: all 400ms ease;
+}
+
+a:hover {
+  color: #1e83f0;
+}
+
+i {
+  user-select: none;
+}
+
+/* Finish Default Styles */
+
+/* Start Helper Classes */
+
+.title {
+  font-size: 2.3rem;
+  color: #444446;
+  font-weight: bold;
+  line-height: 1.2;
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  right: -1rem;
+  width: 0.4rem;
+  height: 4.4rem;
+  background-color: #2bce56;
+  border-radius: 5rem;
+  transform: rotate(8deg);
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  /* max-width: 250px; */
+  height: 60%;
+  background-color: rgba(43, 206, 86, 0.2);
+}
+/* Finish Helper Classes */
+
+.dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out,
+    top 0.3s ease-in-out;
+  top: 5rem; /* Adjust the value according to your design */
+}
+
+.header-item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  top: 6.5rem; /* Adjust the value according to your design */
+}
+
+/* ///////// */
+
+.courses-top-bar__icon--active {
+  color: #fff !important;
+  background-color: #1e83f0;
+  border: none !important;
+}
+
+.courses-top-bar__selection:hover .category-dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+
+.courses-top-bar__selection-item--active {
+  background-color: #ddd !important;
+}
+
+.courses__pagination-link--active {
+  color: #fff;
+  background-color: rgb(43, 206, 86) !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f7f9fa;
+}
+
+.accordion-button::after {
+  position: absolute;
+  left: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  background-position: center;
+}
+
+.suggestion-articles__right::before {
+  content: "قدیمی تر";
+  position: absolute;
+  top: -2rem;
+  left: 2rem;
+  font-size: 1.5rem;
+  color: #adb5db;
+  font-weight: bold;
+}
+
+.suggestion-articles__left::before {
+  content: "جدید تر";
+  position: absolute;
+  top: -2rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: #adb5db;
+}
+
+.login-register::before {
+  content: "";
+  position: absolute;
+  top: -5rem;
+  width: 150%;
+  height: 380px;
+  background-color: #2bce56;
+  z-index: -1;
+  transform: rotate(-4deg);
+}
+.login-register::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 380px;
+  background-color: rgb(43, 206, 86, 0.6);
+  z-index: -9999;
+  transform: rotate(-4deg);
+}
+
+.swal-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.comments__pagantion-link--active {
+  background-color: #2bce56 !important;
+  color: white !important;
+}
+
+.course-box:hover .courses-box__discount {
+  transform: rotate(0deg);
+}
