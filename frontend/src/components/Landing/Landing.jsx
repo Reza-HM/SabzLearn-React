@@ -12,7 +12,7 @@ const Landing = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:4000/v1/infos/index");
+      const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/infos/index");
       const infos = await res.json();
       console.log(infos);
       setIndexInfos(infos);

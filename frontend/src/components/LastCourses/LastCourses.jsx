@@ -7,7 +7,7 @@ export default function LastCourses() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:4000/v1/courses");
+      const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/courses");
       const allCourses = await res.json();
       setCourses(allCourses);
       console.log(allCourses);

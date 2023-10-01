@@ -47,7 +47,7 @@ export default function Users() {
     const localStorageData = JSON.parse(localStorage.getItem("user"));
 
     const fetchData = async () => {
-      const res = await fetch(`http://localhost:4000/v1/users`, {
+      const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/users`, {
         headers: {
           Authorization: `Bearer ${localStorageData.token}`,
         },
@@ -69,7 +69,7 @@ export default function Users() {
       if (result) {
         const localStorageData = JSON.parse(localStorage.getItem("user"));
 
-        const res = await fetch(`http://localhost:4000/v1/users/${userID}`, {
+        const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/users/${userID}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${localStorageData.token}`,
@@ -96,7 +96,7 @@ export default function Users() {
         const localStorageData = JSON.parse(localStorage.getItem("user"));
 
         const res = await fetch(
-          `http://localhost:4000/v1/users/ban/${userID}`,
+          `https://sabzlearnreactserver.iran.liara.run:4000/v1/users/ban/${userID}`,
           {
             method: "PUT",
             headers: {
@@ -132,7 +132,7 @@ export default function Users() {
       confirmPassword: formState.inputs.password.value,
     };
 
-    const res = await fetch(`http://localhost:4000/v1/auth/register`, {
+    const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/auth/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

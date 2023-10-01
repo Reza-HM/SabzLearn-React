@@ -18,11 +18,11 @@ export default function SendTicket() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:4000/v1/tickets/departments`)
+    fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/tickets/departments`)
       .then((res) => res.json())
       .then((data) => setDepartments(data));
 
-    fetch(`http://localhost:4000/v1/users/courses`, {
+    fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/users/courses`, {
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem("user")).token
@@ -37,7 +37,7 @@ export default function SendTicket() {
   }, []);
 
   const getDepartmentsSub = (departmentID) => {
-    fetch(`http://localhost:4000/v1/tickets/departments-subs/${departmentID}`)
+    fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/tickets/departments-subs/${departmentID}`)
       .then((res) => res.json())
       .then((subs) => setDepartmentsSubs(subs));
   };
@@ -54,7 +54,7 @@ export default function SendTicket() {
       course: ticketCourse.length ? ticketCourse : undefined,
     };
 
-    const res = await fetch(`http://localhost:4000/v1/tickets`, {
+    const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/tickets`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${

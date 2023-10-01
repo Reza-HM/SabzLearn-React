@@ -37,7 +37,7 @@ export default function Articles() {
   useEffect(() => {
     getAllArticles();
 
-    fetch(`http://localhost:4000/v1/category`)
+    fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/category`)
       .then((res) => res.json())
       .then((allCategories) => {
         setCategories(allCategories);
@@ -45,7 +45,7 @@ export default function Articles() {
   }, []);
 
   async function getAllArticles() {
-    const res = await fetch("http://localhost:4000/v1/articles");
+    const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/articles");
     const articles = await res.json();
 
     console.log(articles);
@@ -62,7 +62,7 @@ export default function Articles() {
         const localStorageData = JSON.parse(localStorage.getItem("user"));
 
         const res = await fetch(
-          `http://localhost:4000/v1/articles/${articleID}`,
+          `https://sabzlearnreactserver.iran.liara.run:4000/v1/articles/${articleID}`,
           {
             method: "DELETE",
             headers: {
@@ -93,7 +93,7 @@ export default function Articles() {
     formData.append("categoryID", articleCategory);
     formData.append("cover", articleCover);
 
-    const res = await fetch("http://localhost:4000/v1/articles", {
+    const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/articles", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${localStorageData.token}`,
@@ -128,7 +128,7 @@ export default function Articles() {
     formData.append("categoryID", articleCategory);
     formData.append("cover", articleCover);
 
-    const res = await fetch("http://localhost:4000/v1/articles/draft", {
+    const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/articles/draft", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${localStorageData.token}`,

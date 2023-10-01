@@ -7,7 +7,7 @@ const LastArticles = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:4000/v1/articles");
+      const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/articles");
       const articles = await res.json();
 
       if (res.ok) {

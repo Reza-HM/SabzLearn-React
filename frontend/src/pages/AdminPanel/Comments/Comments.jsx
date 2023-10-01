@@ -10,7 +10,7 @@ export default function Comments() {
   }, []);
 
   function getAllComments() {
-    fetch("http://localhost:4000/v1/comments")
+    fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/comments")
       .then((res) => res.json())
       .then((allComments) => setComments(allComments));
   }
@@ -33,7 +33,7 @@ export default function Comments() {
         const localStorageData = JSON.parse(localStorage.getItem("user"));
 
         const res = await fetch(
-          `http://localhost:4000/v1/comments/${commentID}`,
+          `https://sabzlearnreactserver.iran.liara.run:4000/v1/comments/${commentID}`,
           {
             method: "DELETE",
             headers: {
@@ -62,7 +62,7 @@ export default function Comments() {
         const localStorageData = JSON.parse(localStorage.getItem("user"));
 
         const res = await fetch(
-          `http://localhost:4000/v1/users/ban/${commentID}`,
+          `https://sabzlearnreactserver.iran.liara.run:4000/v1/users/ban/${commentID}`,
           {
             method: "PUT",
             headers: {
@@ -91,7 +91,7 @@ export default function Comments() {
       buttons: "ثبت پاسخ",
     }).then(async (value) => {
       const res = await fetch(
-        `http://localhost:4000/v1/comments/answer/${commentID}`,
+        `https://sabzlearnreactserver.iran.liara.run:4000/v1/comments/answer/${commentID}`,
         {
           method: "POST",
           headers: {
@@ -127,7 +127,7 @@ export default function Comments() {
         const localStorageData = JSON.parse(localStorage.getItem("user"));
 
         const res = await fetch(
-          `http://localhost:4000/v1/comments/accept/${commentID}`,
+          `https://sabzlearnreactserver.iran.liara.run:4000/v1/comments/accept/${commentID}`,
           {
             method: "PUT",
             headers: {
@@ -162,7 +162,7 @@ export default function Comments() {
         const localStorageData = JSON.parse(localStorage.getItem("user"));
 
         const res = await fetch(
-          `http://localhost:4000/v1/comments/reject/${commentID}`,
+          `https://sabzlearnreactserver.iran.liara.run:4000/v1/comments/reject/${commentID}`,
           {
             method: "PUT",
             headers: {

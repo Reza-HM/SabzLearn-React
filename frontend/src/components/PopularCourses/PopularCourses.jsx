@@ -12,7 +12,7 @@ const PopularCourses = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:4000/v1/courses/popular");
+      const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/courses/popular");
       const popularCoursesData = await res.json();
       if (res.ok) {
         setPopularCourses(popularCoursesData);

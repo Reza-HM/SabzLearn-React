@@ -40,7 +40,7 @@ const CourseInfo = () => {
 
     const fetchData = async () => {
       const res = await fetch(
-        `http://localhost:4000/v1/courses/${courseName}`,
+        `https://sabzlearnreactserver.iran.liara.run:4000/v1/courses/${courseName}`,
         {
           headers: {
             Authorization: `Bearer ${
@@ -68,7 +68,7 @@ const CourseInfo = () => {
 
   async function getRelatedCoursesDetails() {
     const res = await fetch(
-      `http://localhost:4000/v1/courses/related/${courseName}`
+      `https://sabzlearnreactserver.iran.liara.run:4000/v1/courses/related/${courseName}`
     );
     const result = await res.json();
     console.log(result);
@@ -78,7 +78,7 @@ const CourseInfo = () => {
   const submitCommentHandler = async (commentBody, commentScore) => {
     const localStorageData = JSON.parse(localStorage.getItem("user"));
 
-    const res = await fetch(`http://localhost:4000/v1/comments`, {
+    const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/comments`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -121,7 +121,7 @@ const CourseInfo = () => {
         const formData = new FormData();
         formData.append("price", 0);
         if (result) {
-          fetch(`http://localhost:4000/v1/courses/${course.id}/register`, {
+          fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/courses/${course.id}/register`, {
             method: "POST",
             headers: {
               Authorization: `Bearer ${
@@ -155,7 +155,7 @@ const CourseInfo = () => {
             buttons: ["ثبت نام بدون کد تخفیف", "اعمال کد تخفیف"],
           }).then((result) => {
             if (result === null) {
-              fetch(`http://localhost:4000/v1/courses/${course.id}/register`, {
+              fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/courses/${course.id}/register`, {
                 method: "POST",
                 headers: {
                   Authorization: `Bearer ${

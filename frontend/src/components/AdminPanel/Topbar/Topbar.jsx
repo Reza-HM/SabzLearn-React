@@ -9,7 +9,7 @@ export default function Topbar() {
     const localStorageData = JSON.parse(localStorage.getItem("user"));
 
     const fetchData = async () => {
-      const res = await fetch(`http://localhost:4000/v1/auth/me`, {
+      const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/auth/me`, {
         headers: {
           Authorization: `Bearer ${localStorageData.token}`,
         },
@@ -27,7 +27,7 @@ export default function Topbar() {
   function seenNotification(notifID) {
     const localStorageData = JSON.parse(localStorage.getItem("user"));
 
-    fetch(`http://localhost:4000/v1/notifications/see/${notifID}`, {
+    fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/notifications/see/${notifID}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${localStorageData.token}`,

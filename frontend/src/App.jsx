@@ -27,7 +27,7 @@ const App = () => {
   useEffect(() => {
     const localStorageData = JSON.parse(localStorage.getItem("user"));
     if (localStorageData) {
-      fetch("http://localhost:4000/v1/auth/me", {
+      fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/auth/me", {
         headers: {
           Authorization: `Bearer ${localStorageData.token}`,
         },

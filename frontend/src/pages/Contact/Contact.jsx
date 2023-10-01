@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Header from "./../../components/Header/Header";  
+import Header from "./../../components/Header/Header";
 import Footer from "./../../components/Footer/Footer";
 import Input from "../../components/Form/Input";
 import {
@@ -54,7 +54,7 @@ const Contact = () => {
       body: formState.inputs.body.value,
     };
 
-    const res = await fetch("http://localhost:4000/v1/contact", {
+    const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -37,12 +37,12 @@ const CourseBox = (props) => {
             <div className="flex">
               {Array(5 - props.courseAverageScore)
                 .fill(0)
-                .map((item) => (
+                .map(() => (
                   <img src="/images/svgs/star.svg" alt="score" className="" />
                 ))}
               {Array(props.courseAverageScore)
                 .fill(0)
-                .map((item) => (
+                .map(() => (
                   <img
                     src="/images/svgs/star_fill.svg"
                     alt="score"

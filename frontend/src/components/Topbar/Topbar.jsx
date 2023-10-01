@@ -8,7 +8,7 @@ const Topbar = memo(({ infos }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(`http://localhost:4000/v1/menus/topbar`);
+      const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/menus/topbar`);
       const result = await res.json();
       console.log(result);
       setAllTopbarLinks(result);

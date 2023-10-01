@@ -19,7 +19,7 @@ const Session = () => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        `http://localhost:4000/v1/courses/${courseName}/${sessionID}`,
+        `https://sabzlearnreactserver.iran.liara.run:4000/v1/courses/${courseName}/${sessionID}`,
         {
           headers: {
             Authorization: `Bearer ${
@@ -113,7 +113,7 @@ const Session = () => {
                 <video
                   className="episode-content__video rounded-lg"
                   controls
-                  src={`http://localhost:4000/courses/covers/${session.video}`}
+                  src={`https://sabzlearnreactserver.iran.liara.run:4000/courses/covers/${session.video}`}
                 ></video>
                 <a className="episode-content__video-link" href="#">
                   دانلود ویدئو

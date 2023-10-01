@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Footer from "../../Components/Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import Input from "../../components/Form/Input";
 import PersonIcon from "@mui/icons-material/Person";
 import EmailIcon from "@mui/icons-material/Email";
@@ -70,7 +70,7 @@ const Register = () => {
       confirmPassword: formState.inputs.password.value,
     };
 
-    const res = await fetch(`http://localhost:4000/v1/auth/register`, {
+    const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/auth/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -29,7 +29,7 @@ const Offs = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:4000/v1/courses");
+      const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/courses");
       const coursesData = await res.json();
       setCourses(coursesData);
     };
@@ -41,7 +41,7 @@ const Offs = () => {
   }, []);
 
   async function getAllOffs() {
-    const res = await fetch(`http://localhost:4000/v1/offs`, {
+    const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/offs`, {
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem("user")).token
@@ -64,7 +64,7 @@ const Offs = () => {
       course: courseValue,
     };
 
-    const res = await fetch(`http://localhost:4000/v1/offs`, {
+    const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/offs`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -96,7 +96,7 @@ const Offs = () => {
       if (result) {
         const localStorageData = JSON.parse(localStorage.getItem("user"));
 
-        const res = await fetch(`http://localhost:4000/v1/offs/${offID}`, {
+        const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/offs/${offID}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${localStorageData.token}`,

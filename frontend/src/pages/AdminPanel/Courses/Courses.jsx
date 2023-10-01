@@ -50,7 +50,7 @@ export default function Courses() {
     getAllCourses();
 
     const fetchData = async () => {
-      const res = await fetch("http://localhost:4000/v1/category");
+      const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/category");
       const categories = await res.json();
 
       if (res.ok) {
@@ -63,7 +63,7 @@ export default function Courses() {
 
   function getAllCourses() {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:4000/v1/courses");
+      const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/courses");
       const courses = await res.json();
 
       if (res.ok) {
@@ -85,7 +85,7 @@ export default function Courses() {
         const localStorageData = JSON.parse(localStorage.getItem("user"));
 
         const res = await fetch(
-          `http://localhost:4000/v1/courses/${courseID}`,
+          `https://sabzlearnreactserver.iran.liara.run:4000/v1/courses/${courseID}`,
           {
             method: "DELETE",
             headers: {
@@ -122,7 +122,7 @@ export default function Courses() {
     formData.append("support", formState.inputs.support.value);
     formData.append("cover", courseCover);
 
-    const res = await fetch("http://localhost:4000/v1/courses", {
+    const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/courses", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${localStorageData.token}`,

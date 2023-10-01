@@ -8,7 +8,7 @@ export default function Courses() {
   const [shownCourses, setShownCourses] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/v1/users/courses/`, {
+    fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/users/courses/`, {
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem("user")).token
@@ -124,7 +124,7 @@ export default function Courses() {
                         <a class="main__box-img-link" href="#">
                           <img
                             class="main__box-img img-fluid"
-                            src={`http://localhost:4000/courses/covers/${course.course.cover}`}
+                            src={`https://sabzlearnreactserver.iran.liara.run:4000/courses/covers/${course.course.cover}`}
                           />
                         </a>
                       </div>

@@ -26,7 +26,7 @@ const Category = () => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        `http://localhost:4000/v1/courses/category/${categoryName}`
+        `https://sabzlearnreactserver.iran.liara.run:4000/v1/courses/category/${categoryName}`
       );
       const allCourses = await res.json();
       setCourses(allCourses);

@@ -14,7 +14,7 @@ export default function TicketAnswer() {
   const [ticketAnswer, setTicketAnswer] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:4000/v1/tickets/answer/${id}`, {
+    fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/tickets/answer/${id}`, {
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem("user")).token
@@ -26,7 +26,7 @@ export default function TicketAnswer() {
         setTicketInfo(data);
       });
 
-    fetch(`http://localhost:4000/v1/tickets/answer/${id}`, {
+    fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/tickets/answer/${id}`, {
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem("user")).token

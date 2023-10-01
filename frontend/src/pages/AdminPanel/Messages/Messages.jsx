@@ -10,7 +10,7 @@ const Messages = () => {
   }, []);
 
   async function getAllMessages() {
-    const res = await fetch("http://localhost:4000/v1/contact");
+    const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/contact");
     const messages = await res.json();
     console.log(messages);
     setMessagesData(messages);
@@ -32,7 +32,7 @@ const Messages = () => {
     }).then(async (value) => {
       const localStorageData = JSON.parse(localStorage.getItem("user"));
       console.log(value);
-      const res = await fetch("http://localhost:4000/v1/contact/answer", {
+      const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/contact/answer", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,7 +68,7 @@ const Messages = () => {
         const localStorageData = JSON.parse(localStorage.getItem("user"));
 
         const res = await fetch(
-          `http://localhost:4000/v1/contact/${messageID}`,
+          `https://sabzlearnreactserver.iran.liara.run:4000/v1/contact/${messageID}`,
           {
             method: "DELETE",
             headers: {

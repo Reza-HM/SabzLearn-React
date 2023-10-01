@@ -24,7 +24,7 @@ export default function Footer() {
       email: formState.inputs.email.value,
     };
 
-    const res = await fetch("http://localhost:4000/v1/newsletters", {
+    const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/newsletters", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

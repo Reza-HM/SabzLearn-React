@@ -12,7 +12,7 @@ const PresellCourses = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:4000/v1/courses/presell");
+      const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/courses/presell");
       const presellCoursesData = await res.json();
       if (res.ok) {
         setPresellCourses(presellCoursesData);

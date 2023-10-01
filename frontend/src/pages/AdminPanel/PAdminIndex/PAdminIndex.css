@@ -22,15 +22,15 @@
 }
 @font-face {
   font-family: "vazir";
-  src: url("/../../../../fonts/Vazir/Vazir.ttf");
-  src: url("/../../../../fonts/Vazir/Vazir.eot");
-  src: url("/../../../../fonts/Vazir/Vazir.woff");
-  src: url("/../../../../fonts/Vazir/Vazir.woff2");
+  src: url("/fonts/Vazir/Vazir.ttf");
+  src: url("/fonts/Vazir/Vazir.eot");
+  src: url("/fonts/Vazir/Vazir.woff");
+  src: url("/fonts/Vazir/Vazir.woff2");
 }
 @font-face {
   font-family: "lalezar";
-  src: url("/../../../../fonts/Lalezar-Font/OTF/Lalezar-Regular.otf");
-  src: url("/../../../../fonts/Lalezar-Font/TTF/Lalezar-Regular.ttf");
+  src: url("/fonts/Lalezar-Font/OTF/Lalezar-Regular.otf");
+  src: url("/fonts/Lalezar-Font/TTF/Lalezar-Regular.ttf");
 }
 #sidebar {
   background-color: #17203f;
@@ -394,7 +394,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;

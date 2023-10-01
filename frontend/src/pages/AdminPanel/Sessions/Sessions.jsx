@@ -16,7 +16,7 @@ const Sessions = () => {
     getAllSessions();
 
     const fetchData = async () => {
-      const res = await fetch("http://localhost:4000/v1/courses");
+      const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/courses");
       const result = await res.json();
       console.log(result);
       setCourses(result);
@@ -25,7 +25,7 @@ const Sessions = () => {
   }, []);
 
   async function getAllSessions() {
-    const res = await fetch("http://localhost:4000/v1/courses/sessions");
+    const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/courses/sessions");
     const result = await res.json();
     console.log(result);
     setSessions(result);
@@ -57,7 +57,7 @@ const Sessions = () => {
     formData.append("free", sessionStatus);
 
     const res = await fetch(
-      `http://localhost:4000/v1/courses/${sessionCourse}/sessions`,
+      `https://sabzlearnreactserver.iran.liara.run:4000/v1/courses/${sessionCourse}/sessions`,
       {
         method: "POST",
         headers: {
@@ -90,7 +90,7 @@ const Sessions = () => {
         const localStorageData = JSON.parse(localStorage.getItem("user"));
 
         const res = await fetch(
-          `http://localhost:4000/v1/courses/sessions/${sessionID}`,
+          `https://sabzlearnreactserver.iran.liara.run:4000/v1/courses/sessions/${sessionID}`,
           {
             method: "DELETE",
             headers: {

@@ -26,7 +26,7 @@ const ArticleInfo = () => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        `http://localhost:4000/v1/articles/${articleName}`
+        `https://sabzlearnreactserver.iran.liara.run:4000/v1/articles/${articleName}`
       );
       const articleInfo = await res.json();
 

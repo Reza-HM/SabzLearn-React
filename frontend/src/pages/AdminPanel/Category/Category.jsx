@@ -27,7 +27,7 @@ export default function Category() {
   }, []);
 
   function getAllCategories() {
-    fetch(`http://localhost:4000/v1/category`)
+    fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/category`)
       .then((res) => res.json())
       .then((allCategories) => {
         console.log(allCategories);
@@ -44,7 +44,7 @@ export default function Category() {
       name: formState.inputs.shortname.value,
     };
 
-    const res = await fetch("http://localhost:4000/v1/category", {
+    const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/category", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -77,7 +77,7 @@ export default function Category() {
         const localStorageData = JSON.parse(localStorage.getItem("user"));
 
         const res = await fetch(
-          `http://localhost:4000/v1/category/${categoryID}`,
+          `https://sabzlearnreactserver.iran.liara.run:4000/v1/category/${categoryID}`,
           {
             method: "DELETE",
             headers: {
@@ -106,7 +106,7 @@ export default function Category() {
       console.log(result);
       if (result.trim().length) {
         const res = await fetch(
-          `http://localhost:4000/v1/category/${categoryID}`,
+          `https://sabzlearnreactserver.iran.liara.run:4000/v1/category/${categoryID}`,
           {
             method: "PUT",
             headers: {

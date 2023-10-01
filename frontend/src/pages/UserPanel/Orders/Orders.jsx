@@ -6,7 +6,7 @@ export default function Orders() {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/v1/orders`, {
+    fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/orders`, {
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem("user")).token

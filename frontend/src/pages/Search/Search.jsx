@@ -13,7 +13,7 @@ const Search = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(`http://localhost:4000/v1/search/${value}`);
+      const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/search/${value}`);
       const searchResults = await res.json();
 
       if (res.ok) {

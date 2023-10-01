@@ -10,7 +10,7 @@ export default function Campaigns() {
       discount: campaign,
     };
 
-    fetch(`http://localhost:4000/v1/offs/all`, {
+    fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/offs/all`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${

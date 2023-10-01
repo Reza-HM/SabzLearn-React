@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import DataTable from "../../../Components/AdminPanel/DataTable/DataTable";
+import DataTable from "../../../components/AdminPanel/DataTable/DataTable";
 import swal from "sweetalert";
 
 export default function Tickets() {
@@ -10,7 +10,7 @@ export default function Tickets() {
   }, []);
 
   function getAllTickets() {
-    fetch(`http://localhost:4000/v1/tickets`, {
+    fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/tickets`, {
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem("user")).token
@@ -45,7 +45,7 @@ export default function Tickets() {
         ticketID: ticketID,
       };
 
-      const res = await fetch(`http://localhost:4000/v1/tickets/answer`, {
+      const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/tickets/answer`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorageData.token}`,

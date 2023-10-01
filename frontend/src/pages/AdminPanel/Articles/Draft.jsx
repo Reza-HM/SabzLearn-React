@@ -17,7 +17,7 @@ const Draft = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(`http://localhost:4000/v1/articles/${shortName}`);
+      const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/articles/${shortName}`);
       const result = await res.json();
       console.log(result);
       setArticleInfos(result);
@@ -37,7 +37,7 @@ const Draft = () => {
 
   function getAllCourses() {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:4000/v1/courses");
+      const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/courses");
       const courses = await res.json();
 
       if (res.ok) {
@@ -66,7 +66,7 @@ const Draft = () => {
     formData.append("categoryID", articleCategory);
     formData.append("cover", articleCover);
 
-    const res = await fetch("http://localhost:4000/v1/articles/draft", {
+    const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/articles/draft", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${localStorageData.token}`,

@@ -30,7 +30,7 @@ export default function EditAccount() {
       password,
     };
 
-    const res = await fetch("http://localhost:4000/v1/users", {
+    const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/users", {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${

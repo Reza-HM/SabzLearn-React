@@ -51,7 +51,7 @@ const Login = () => {
       password: formState.inputs.password.value,
     };
 
-    const res = await fetch("http://localhost:4000/v1/auth/login", {
+    const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

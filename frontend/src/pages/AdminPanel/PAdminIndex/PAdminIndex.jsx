@@ -17,7 +17,7 @@ const PAdminIndex = () => {
   }, []);
 
   async function getPAdminInfos() {
-    const res = await fetch(`http://localhost:4000/v1/infos/p-admin`, {
+    const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/infos/p-admin`, {
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem("user")).token
@@ -40,7 +40,7 @@ const PAdminIndex = () => {
       if (result) {
         const localStorageData = JSON.parse(localStorage.getItem("user"));
 
-        const res = await fetch(`http://localhost:4000/v1/users/${userID}`, {
+        const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/users/${userID}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${localStorageData.token}`,
@@ -59,7 +59,7 @@ const PAdminIndex = () => {
 
   const changeRoleHandler = async (userID, userRole) => {
     console.log(userID);
-    const res = await fetch(`http://localhost:4000/v1/users/role`, {
+    const res = await fetch(`https://sabzlearnreactserver.iran.liara.run:4000/v1/users/role`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${

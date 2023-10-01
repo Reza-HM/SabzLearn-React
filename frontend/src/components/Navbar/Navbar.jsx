@@ -12,7 +12,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:4000/v1/menus");
+      const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/menus");
       const result = await res.json();
       console.log(result);
       setAllMenus(result);

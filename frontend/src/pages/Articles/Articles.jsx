@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Header from "./../../components/Header/Header";
-import Breadcrumb from "../../Components/Breadcrumb/Breadcrumb";
-import Footer from "../../Components/Footer/Footer";
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
+import Footer from "../../components/Footer/Footer";
 import Pagination from "../../components/Pagination/Pagination";
-import ArticleBox from "../../Components/ArticleBox/ArticleBox";
+import ArticleBox from "../../components/ArticleBox/ArticleBox";
 
 const Courses = () => {
   const [articles, setArticles] = useState([]);
@@ -11,7 +11,7 @@ const Courses = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:4000/v1/articles");
+      const res = await fetch("https://sabzlearnreactserver.iran.liara.run:4000/v1/articles");
       const allArticles = await res.json();
       setArticles(allArticles);
       console.log(allArticles);
